@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA API Pictures</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov"
+    />
+    <!-- ZTM Favicon -->
+    <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
+  </head>
+  <body>
+    <!--loader-->
+    <div class="loader hidden">
+      <img src="rocket.svg" alt="rocket loading animation" />
+    </div>
+    <!--container-->
+    <div class="wrapper">
+      <!--navigation-->
+      <div class="navigation-container">
+        <span class="background"></span>
+        <!--result nav-->
+        <span class="navigation-items" id="navigation-like">
+          <h3 class="clickable" onclick="changeHere('favorate')">
+            ❤️Liked Images
+          </h3>
+          <h3>&nbsp;&nbsp;&nbsp;✧&nbsp;&nbsp;&nbsp;</h3>
+          <h3 class="clickable" onclick="getNasaPictures()">💙load more</h3>
+        </span>
+        <!--favorates nav-->
+        <span class="navigation-items hidden" id="navigation-favorite">
+          <h3 class="clickable" onclick="getNasaPictures()">
+            Load more Images
+          </h3>
+        </span>
+      </div>
+      <!--image container-->
+      <div class="image-container"></div>
+    </div>
+    <!--save confirmation-->
+    <div class="saved" hidden>
+      <p>❤️Liked</p>
+    </div>
+    <!-- Script -->
+    <script src="app.js"></script>
+  </body>
+</html>
